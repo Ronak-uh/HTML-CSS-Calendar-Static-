@@ -1,0 +1,61 @@
+body {
+  background: #f0f2f5;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 30px;
+  text-align: center;
+}
+
+.title {
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.month {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.month:hover {
+  transform: scale(1.02);
+}
+
+.month-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.weekdays, .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.weekdays div {
+  font-weight: bold;
+  color: #555;
+}
+
+.days div {
+  background-color: #e9ecef;
+  border-radius: 6px;
+  padding: 10px 0;
+  color: #333;
+}
+
+.days div.empty {
+  background: transparent;
+  pointer-events: none;
+}
